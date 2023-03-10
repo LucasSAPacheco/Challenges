@@ -8,8 +8,12 @@ def faturamento_mensal():
     }
 
     total = sum(faturamento.values())
-    percentuais = {estado: (valor / total) * 100 for estado, valor in faturamento.items()}
-    for estado, percentual in percentuais.items():
+    porcentagens = {}
+    for estado, valor in faturamento.items():
+        porcentagem = (valor / total) * 100
+        porcentagens[estado] = porcentagem
+
+    for estado, percentual in porcentagens.items():
         print(f"{estado}: {percentual:.2f}%")
     return
 

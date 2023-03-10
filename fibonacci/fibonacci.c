@@ -8,7 +8,7 @@ int fibonacci(int number)
         soma = aux + aux2;
         aux = aux2;
         aux2 = soma;
-        k = k + 1;
+        k += 1;
         if (soma == number){
             printf("This Number is a Fibonacci Number\n");
             return (0);
